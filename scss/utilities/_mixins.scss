@@ -1,0 +1,5 @@
+@mixin mobile { // Telefono
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}

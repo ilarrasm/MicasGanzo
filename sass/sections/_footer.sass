@@ -1,0 +1,121 @@
+.form
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    grid-column-gap: 25px
+    grid-row-gap: 1px 
+    align-self: center
+    justify-self: center
+    margin: 5% 0
+    margin-right: 10%
+    height: 268px
+    width: 72%
+    margin-bottom: 5%
+    textarea
+        resize: none
+        font-size: $P1
+        font-family: $font-secundary
+        font-weight: 100
+        background: whitesmoke
+        border: none
+        height: 40%
+    input
+        background: whitesmoke
+        border: none
+    option
+        color: $negro
+        border: none
+        box-shadow: none
+    label
+        font-size: $P1
+        font-weight: 600
+        margin-bottom: 5%
+        color: $negro
+.contact
+    background: $gris
+    position: relative
+    top: 0%
+    left: 0%
+.custom-select 
+    font-size: $P1
+    position: relative
+    .fa-circle-chevron-down
+        position: absolute
+        top: 55%
+        right: 2%
+        color: $negro
+        font-size: $P2
+    select
+        margin-top: 4%
+        padding: 2rem
+        background: whitesmoke
+        font-size: 1.375rem
+        color: #8e8e8e
+        border: none
+        appearance: none
+        cursor: pointer
+        appearance: none
+        -webkit-appearance: none
+        -moz-appearance: none
+        -ms-appearance: none
+        position: relative
+        &:active
+            text-shadow: none
+        &:focus
+            outline: none
+
+.custom-select .selector-options 
+  list-style: none
+  background: whitesmoke
+  color: $negro
+  border-radius: 4px
+  z-index: 1
+  width: 100%
+  position: absolute
+  left: 0%
+  top: 40%  
+
+
+.custom-select .selector-options li 
+    height: 35px
+    display: flex
+    align-items: center
+    padding: 2rem
+    cursor: pointer
+    transition: background 0.3s ease
+.custom-select .selector-options li:nth-child(1)
+    background: $gris
+    cursor: default
+    font-weight: 100
+    &:hover
+        background: $gris
+
+.custom-select .selector-options li:hover 
+  background: $celeste
+
+select, input, textarea
+    font-size: $P1
+    border-radius: 5px
+    padding: 2rem
+    &:focus
+        outline: none
+.datos
+    background: $celeste
+    position: absolute
+    top: 36%
+    left: 5%
+    width: 34%
+    height: 52%
+    padding-top: 4rem
+    padding-left: 4rem
+    border-radius: $radius
+    ul li
+        font-family: $font-secundary
+        list-style: none
+        margin: 3rem 0
+        font-size: $P1
+        color: $gColor
+.datitos
+    li
+        display: flex
+        align-items: center

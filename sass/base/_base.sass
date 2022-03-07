@@ -1,0 +1,58 @@
+*
+    scroll-behavior: smooth
+.flex-row
+    display: flex
+    &--pad
+        @extend .flex-row
+        padding: 10rem 3rem
+    &--jusCenter
+         @extend .flex-row
+         justify-content: center
+    &--jusBet
+        @extend .flex-row 
+        justify-content: space-between
+        width: 63%
+        margin-left: 9%
+    &--purpleBkg
+        @extend .flex-row
+        background: $violeta
+    &-margin-1-3
+        @extend .flex-row
+        margin-left: 1rem
+        margin-top: 3rem
+        align-items: center
+    &--justAr
+        @extend .flex-row
+        justify-content: space-around
+        padding: 5rem
+    &--justEven
+        @extend .flex-row
+        justify-content: space-evenly
+        padding: 7rem
+.flex-column
+    display: flex
+    flex-direction: column
+    &--jusCenter
+         @extend .flex-column
+         justify-content: center
+    &--purpleBkg
+        @extend .flex-column
+        background: $violeta
+    &--pad
+        padding: 10rem
+    &--pad15
+        padding: 5% 1%
+        margin: 5% 5%
+        margin-left: 20%
+        background: $white
+        border-radius: $radius
+        .form, .H3, div
+            margin-left: 28%
+.align-center
+    align-items: center
+.marginLeft-5
+    margin-left: 5%
+.bgk-cultured
+    background: $cultured
+.playLock
+    cursor: default

@@ -1,0 +1,68 @@
+.eleccion {
+    padding: 3rem;
+    h2 {
+        font-family: $font-primary;
+        font-size: 700;
+        text-align: center;
+        font-size: 3.5rem;
+        color: $violeta;
+        margin: 1.5rem 0 5rem 0;
+    }
+
+    &__cards {
+        margin: 7rem 0;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+
+        grid-auto-flow: column;
+
+        &__item {
+            margin: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .card-svg {
+                background-color: $violeta;
+                border-radius: 50%;
+                padding: 1.7rem;
+            }
+
+            h3 {
+                margin: 1.6rem 0;
+                font-size: 2.7rem;
+                font-weight: 700;
+                color: $negro;
+            }
+
+            p {
+                font-size: 1.7rem;
+                font-weight: 400;
+                text-align: center;
+                color: $negro;
+            }
+        }
+    }
+
+    &__prueba {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        margin: 5rem 0;
+        p {
+            border-radius: 1.5rem;
+            background-color: $violeta;
+            color: #fff;
+            width: fit-content;
+            padding: 3rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        p:hover {
+            background-color: $negro;
+        }
+    }
+}

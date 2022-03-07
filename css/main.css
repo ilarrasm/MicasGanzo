@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: Helvetica, sans-serif; }
+
+.navbar {
+  background-color: #fff;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 22rem;
+  box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.75); }
+  .navbar .logo-MG {
+    display: none; }
+  .navbar .logo-nav {
+    width: 15rem; }
+  .navbar ul {
+    margin-bottom: 0; }
+  .div-nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none; }
+    .navbar .div-nav__list__item {
+      margin: 0 2rem; }
+      .navbar .div-nav__list__item a {
+        display: block;
+        font-size: 1.7rem;
+        text-decoration: none;
+        color: #313653;
+        transition: all 220ms; }
+        .navbar .div-nav__list__item a button {
+          cursor: pointer;
+          font-size: 1.7rem;
+          letter-spacing: 1px;
+          background-color: #45ABB5;
+          color: #fff;
+          border: none;
+          border-radius: 3rem;
+          padding: .6rem 3.6rem; }
+        .navbar .div-nav__list__item a button:hover {
+          background-color: #313653; }
+      .navbar .div-nav__list__item a:hover {
+        color: #45ABB5; }
+
+.toggle-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px; }
+  .toggle-btn .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #313653;
+    border-radius: 5rem; }
+
+.eleccion {
+  padding: 3rem; }
+  .eleccion h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 700;
+    text-align: center;
+    font-size: 3.5rem;
+    color: #4500A6;
+    margin: 1.5rem 0 5rem 0; }
+  .eleccion__cards {
+    margin: 7rem 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: column; }
+    .eleccion__cards__item {
+      margin: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+      .eleccion__cards__item .card-svg {
+        background-color: #4500A6;
+        border-radius: 50%;
+        padding: 1.7rem; }
+      .eleccion__cards__item h3 {
+        margin: 1.6rem 0;
+        font-size: 2.7rem;
+        font-weight: 700;
+        color: #313653; }
+      .eleccion__cards__item p {
+        font-size: 1.7rem;
+        font-weight: 400;
+        text-align: center;
+        color: #313653; }
+  .eleccion__prueba {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 5rem 0;
+    cursor: pointer;
+    user-select: none;
+   }
+    .eleccion__prueba p {
+      border-radius: 1.5rem;
+      background-color: #4500A6;
+      color: #fff;
+      width: fit-content;
+      padding: 3rem;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1px; }
+    .eleccion__prueba p:hover {
+      background-color: #313653; }
+
+.ayuda {
+  background-color: #D7DEFF;
+  padding: .5rem 6rem; }
+  .ayuda__first {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem 6rem; }
+    .ayuda__first__text h2 {
+      font-family: "Playfair Display", serif;
+      color: #4500A6;
+      font-size: 4.2rem;
+      margin-bottom: 2rem; }
+    .ayuda__first__text p {
+      font-size: 2.2rem;
+      line-height: 1.5;
+      color: #313653; }
+    .ayuda__first svg {
+      width: 40%; }
+  .ayuda__cards {
+    padding: 2rem 10rem;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+    grid-auto-flow: column; }
+    .ayuda__cards__card {
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: #4500A6;
+      border-radius: 2rem;
+      color: #FFF; }
+      .ayuda__cards__card img {
+        width: 100%; }
+      .ayuda__cards__card .info {
+        height: 45rem;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        .ayuda__cards__card .info .text {
+          width: 100%;
+          margin: 0 1rem; }
+          .ayuda__cards__card .info .text h3 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem; }
+          .ayuda__cards__card .info .text p {
+            font-size: 1.7rem;
+            line-height: 1.5; }
+        .ayuda__cards__card .info .center-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .ayuda__cards__card .info .center-btn a {
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-size: 1.6rem; }
+            .ayuda__cards__card .info .center-btn a button {
+              cursor: pointer;
+              width: 25rem;
+              font-weight: bold;
+              border: none;
+              padding: 1.5rem 2.8rem;
+              color: #4500A6;
+              background-color: #FFF;
+              border-radius: 2rem;
+              transition: all 250ms; }
+            .ayuda__cards__card .info .center-btn a button:hover {
+              background-color: #313653;
+              color: #FFF; }
+
+.footer {
+  background-color: #4500A6;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 10rem;
+  color: #fff; }
+  .footer__section h3 {
+    font-size: 1.9rem;
+    letter-spacing: 1px; }
+  .footer__section ul {
+    margin: 1rem 0;
+    list-style: none;
+    font-size: 1.4rem;
+    padding-left: 0; }
+    .footer__section ul li a {
+      color: #fff;
+      text-decoration: none; }
+    .footer__section ul li a:hover {
+      text-decoration: underline; }
+  .footer__section__logos {
+    margin: 1rem 0;
+    display: flex; }
+    .footer__section__logos span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: .7rem;
+      margin-right: .6rem;
+      height: auto;
+      background-color: #fff;
+      border-radius: 50%; }
+  .footer .section-1 p {
+    font-size: 1.5rem;
+    margin: 1rem 0; }
+  .footer .section-3 ul li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center; }
+    .footer .section-3 ul li span {
+      margin: 0 1rem; }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+    .navbar .logo-nav {
+      display: none; }
+    .navbar .logo-MG {
+      display: block;
+      padding-left: 1.5rem; }
+    .navbar .div-nav {
+      display: none;
+      width: 100%; }
+      .navbar .div-nav ul {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 2rem; }
+        .navbar .div-nav ul li {
+          text-align: center; }
+          .navbar .div-nav ul li a {
+            padding: 1rem; }
+    .navbar .div-nav.active {
+      display: flex; }
+    .navbar .toggle-btn {
+      display: flex;
+      align-items: center; }
+  .eleccion h2 {
+    font-size: 3.4rem;
+    line-height: 1.4; }
+  .eleccion__cards {
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .eleccion__cards__item {
+      margin: 1.5rem 0; }
+      .eleccion__cards__item h3 {
+        margin: 1rem 0;
+        font-size: 2.3rem; }
+      .eleccion__cards__item p {
+        font-size: 1.6rem; }
+  .eleccion__prueba {
+    text-align: center;
+    margin: 3rem 0; }
+    .eleccion__prueba p {
+      padding: 2.5rem;
+      font-size: 1.8rem; }
+  .ayuda {
+    padding: 2rem; }
+    .ayuda__first {
+      margin: 1rem; }
+      .ayuda__first__text h2 {
+        text-align: center;
+        font-size: 3.4rem; }
+      .ayuda__first__text p {
+        text-align: center;
+        font-size: 2rem; }
+      .ayuda__first svg {
+        display: none; }
+    .ayuda__cards {
+      margin-top: 3rem;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .ayuda__cards__card {
+        border-radius: 1.5rem; }
+        .ayuda__cards__card .info .text {
+          margin: 0;
+          text-align: center; }
+          .ayuda__cards__card .info .text h3 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem; }
+          .ayuda__cards__card .info .text p {
+            font-size: 1.5rem;
+            line-height: 1.5; }
+        .ayuda__cards__card .info .center-btn a {
+          font-size: 1.5rem; }
+          .ayuda__cards__card .info .center-btn a button {
+            border-radius: 1.5rem;
+            width: 21.5rem;
+            padding: 1.5rem;
+            transition: all 200ms; }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem; }
+    .footer .section-1 {
+      text-align: center; }
+      .footer .section-1 p {
+        font-size: 1.7rem; }
+    .footer__section {
+      margin: 1.2rem 0;
+      text-align: center; }
+      .footer__section h3 {
+        font-size: 2.4rem; }
+      .footer__section ul {
+        font-size: 1.5rem; }
+      .footer__section__logos {
+        margin: 2rem 0;
+        justify-content: center; }
+    .footer .section-3 ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .footer .section-3 ul li {
+        margin: .8rem 0; } }

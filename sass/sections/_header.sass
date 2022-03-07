@@ -1,0 +1,41 @@
+#hamburguer
+    display: none
+.header
+    display: flex
+    flex-direction: column
+    .navbar
+        padding: 1.4rem 3rem
+        z-index: 100
+    &__presentation
+        height: 603px
+        width: 100%  
+        background: $white url(../assets/header.jpg) no-repeat
+        background-size: 100%
+        padding: 5rem
+        padding-top: 2rem
+        position: relative
+        &::before
+            content: ""
+            background: $negro
+            opacity: .3 
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 44
+            height: 100%
+            width: 100% 
+        &__p, h1, button
+            margin-left: 1rem
+            position: relative
+            z-index: 45
+            color: $white
+            margin-top: 3rem
+        h1
+            font-size: $H1
+            width: 40%
+            font-family: $font-primary
+        p
+            font-family: $font-secundary
+            font-size: $H4
+            width: 46%
+

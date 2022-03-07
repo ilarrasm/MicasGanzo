@@ -1,0 +1,63 @@
+.H2
+    font-family: $font-primary
+    font-size: $H2
+    color: $negro
+    &--white
+        @extend .H2
+        color: $white
+    &--margin
+        @extend .H2
+        margin: 1rem
+    &--purple
+        @extend .H2
+        color: $violeta
+        text-align: center
+        margin-top: 5%
+        margin-bottom: 10%
+        &-boton
+            @extend .H2--purple
+            margin-bottom: 1%
+            margin-top: 10%
+            font-size: 48px 
+.H3
+    font-family: $font-secundary
+    font-size: 36px
+    color: $negro
+    font-weight: 100
+.P1
+    font-size: $P1
+    color: $negro
+    letter-spacing: 1px
+    white-space: 1px
+    line-height: 1.7
+    &-helvetica
+        @extend .P1
+        font-family: $font-secundary
+        font-weight: lighter
+        margin: 1rem
+        width: 90%    
+    &-marLeft
+        @extend .P1
+        margin-left: 1rem
+    &-lite
+        @extend .P1
+        font-weight: 100
+        font-style: italic
+.P2
+    font-size: $P2
+    color: $negro
+    &--strong
+        @extend .P2
+        font-weight: bold        
+.success, .error
+    @extend .P1
+    font-family: $font-secundary
+    margin-top: 4.9rem
+    margin-left: 4rem
+    font-weight: 600
+    letter-spacing: 0
+    word-spacing: 0
+.success
+    color: #7DBF5D
+.error
+    color: #FA353A
