@@ -144,19 +144,26 @@
   margin-top: 4rem; }
 
 #carousel {
-  margin-top: 5rem; }
+  margin-top: 5rem;
+  padding: 5%; }
 
 .card {
   padding: 2rem 10rem 3rem 10rem;
   background: #FFFF;
   border-radius: 30px;
-  box-shadow: 5px 5px 5px gray; }
+  box-shadow: 5px 5px 5px gray;
+  height: 100%;
+  width: 70%; }
   .card p {
     margin: 4rem;
     text-align: center; }
 
 .arrow {
   margin: 0 5rem; }
+
+.flag {
+  width: 100px;
+  height: 100px; }
 
 .fa-solid, .fa-bars {
   color: #313653; }
@@ -202,14 +209,16 @@
 
 .fa-solid {
   font-size: 3rem;
-  margin-right: 15px;
-  color: #4500A6; }
+  margin-right: 15px; }
 
 .fa-triangle-exclamation {
   color: #FA353A; }
 
 .fa-check {
   color: #7DBF5D; }
+
+.eleccion__prueba a {
+  text-decoration: none; }
 
 #hamburguer {
   display: none; }

@@ -1,9 +1,119 @@
+
 const hamburguesa = $("#hamburguer");
 hamburguesa.click(()=>{
   $("#nav").toggleClass("show")
 })
-////////////
 
+
+// && carrousel
+
+window.onload = function () {
+  // Variables
+  const testimonios = [
+    {
+      nombre: "Seyma",
+      pais: "Turquía",
+      img: 'assets/turquiaBall.svg',
+      testimonio: `    Micas es mi profesora desde 2019. Fue muy fácil comunicarme con ella desde el 
+      primer momento. Te entiende, te motiva, es divertida. Es una profesora que ama su trabajo y 
+      lo hace muy bien!`
+    },
+    {
+      nombre: "Tunde",
+      pais: "EEUU",
+      img: 'assets/eeuuBall.svg',
+      testimonio: ` Micas was probably the best language teacher I've ever had. She was the first teacher out of 6 in 6 months to teach me Spanish, and she was by far the best. I learned so many fundamentals from her, and our small class loved her so much that the following month we asked her to keep teaching us even though we already had another teacher`
+    },
+    {
+      nombre: "Danilo",
+      pais: "Brasil",
+      img: "assets/brazilBall.svg",
+      testimonio: ` A Micaela foi com certeza a melhor professora de espanhol que já tive, ela tem muito conhecimento do idioma e traz discussões muito interessantes que enriquecem a aula. Recomendo sem sombra de dúvidas.`
+    }
+  ];
+  const TIEMPO_INTERVALO_MILESIMAS_SEG = 10000;
+  let posicionActual = 0;
+  let $botonRetroceder = $(".back");
+  let $botonAvanzar = $(".next")
+  let $contenedor = $("#contenedor-carousel")
+  let intervalo;
+  // Funciones
+  function porTestimonio(){
+    $(".dot").click(function(){
+      let index = $(".dot").index(this)
+      console.log(index)
+      posicionActual = index
+      renderizar()
+    })
+  }
+  porTestimonio()
+  /**
+   * 
+   * 
+   *	
+   * Funcion que cambia la foto en la siguiente posicion
+   */
+  function pasarFoto() {
+      if(posicionActual >= testimonios.length - 1) {
+          posicionActual = 0;
+      } else {
+          posicionActual++;
+      }
+      renderizar();
+  }
+
+  /**
+   * Funcion que cambia la foto en la anterior posicion
+   */
+  function retrocederFoto() {
+      if(posicionActual <= 0) {
+          posicionActual = testimonios.length - 1;
+      } else {
+          posicionActual--;
+      }
+      renderizar();
+  }
+
+  /**
+   * Funcion que actualiza la imagen de imagen dependiendo de posicionActual
+   */
+  function renderizar () {
+      $contenedor.html(`
+      <div class="flex-row--jusCenter align-center">
+          <img class="flag" src=${testimonios[posicionActual].img} alt="bandera de ${testimonios[posicionActual].pais}">
+          <div class="flex-column marginLeft-5">
+              <span class="P2--strong">${testimonios[posicionActual].nombre}</span>
+              <span class="P1-lite">Estudiante de ${testimonios[posicionActual].pais}</span>
+          </div>
+      </div>
+      <p class="P1">${testimonios[posicionActual].testimonio}
+      </p>`);
+      $(".dot").removeClass("active") 
+      $(".dot").eq(posicionActual).toggleClass("active")      
+  }
+
+  /**
+   * Activa el autoplay de la imagen
+   */
+  function playIntervalo() {
+      intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
+  }
+
+  // Eventos
+  $botonAvanzar.click(pasarFoto);
+  $botonRetroceder.click(retrocederFoto);
+  // Iniciar
+  playIntervalo()
+  renderizar();
+} 
+
+
+
+//////////////////////////////
+
+
+////////////
+/// && nose
 document.querySelectorAll('.custom-select').forEach(setupSelector);
 
 function setupSelector(selector) {
@@ -61,17 +171,21 @@ function form(){
   function verificatione(){
     btnSend.prop('disabled', true)
     if(apellido.val() !== "" && nombre.val() !== "" && correo.val() !== "" && mensaje.val() !== "" && asunto.val() !== "Seleccionar")  {
-      console.log("sape"); 
-      $("input, textarea").val("")
-      $(`<span class="success"><i class="fa-solid fa-check"></i>Formulario enviado con exito!</span>`).appendTo("#validator")
       function sendData(){
-        Email.send({
-        SecureToken : "9adb73de-28d4-4472-a1f8-838d780606fb",
-        To : 'martin.ilarras1@gmail.com',
-        From : "ilarrasm.dev@gmail.com",
-        Subject : "[Mi porfolio] Nueva consulta",
-        Body : "Sape Sapeeee"
-        }).then(message => alert(message));
+        const serviceID = 'default_service';
+        const templateID = 'template_pyoteka';
+        emailjs.sendForm(serviceID, templateID, '#form') 
+        .then(function() {
+
+          console.log('SUCCESS!');
+          $("input, textarea").val("")
+          $(`<span class="success"><i class="fa-solid fa-check"></i>Formulario enviado con exito!</span>`).appendTo("#validator")
+
+        }, function(error) {
+
+          console.log('FAILED...', error);
+
+        });  
       }
       sendData();
     }else{
@@ -94,3 +208,4 @@ function form(){
 }
 form()
 
+///////////
